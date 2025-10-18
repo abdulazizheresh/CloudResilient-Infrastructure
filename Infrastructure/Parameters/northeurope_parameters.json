@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "northeurope"
+    },
+    "tags": {
+      "value": {
+        "Project": "CloudResilient",
+        "Environment": "Production",
+        "ManagedBy": "Bicep",
+        "Region": "North Europe"
+      }
+    },
+    
+    "// Networking Parameters": {},
+    "hubVnetName": {
+      "value": "vnet-hub-northeurope-prod"
+    },
+    "hubAddressPrefix": {
+      "value": "10.10.0.0/16"
+    },
+    "spokeVnetName": {
+      "value": "vnet-spoke-northeurope-prod"
+    },
+    "spokeAddressPrefix": {
+      "value": "10.11.0.0/16"
+    },
+    "nsgName": {
+      "value": "nsg-spoke-northeurope-prod"
+    },
+    
+    "// Compute Parameters": {},
+    "functionAppName": {
+      "value": "func-cloudres-northeurope-prod"
+    },
+    "storageAccountName": {
+      "value": "stcloudresneuprod"
+    },
+    "appServicePlanName": {
+      "value": "asp-cloudres-northeurope-prod"
+    },
+    
+    "// Database Parameters": {},
+    "sqlServerName": {
+      "value": "sql-cloudres-northeurope-prod"
+    },
+    "sqlDatabaseName": {
+      "value": "sqldb-cloudres-northeurope-prod"
+    },
+    "sqlAdminUsername": {
+      "value": "sqladmin"
+    },
+    
+    "// Security Parameters": {},
+    "keyVaultName": {
+      "value": "kv-cloudres-neu-prod"
+    },
+    "managedIdentityName": {
+      "value": "identity-cloudres-neu-prod"
+    },
+    "privateEndpointNameStorage": {
+      "value": "pe-storage-blob-centralus-prod"
+    },
+    "privateEndpointNameSql": {
+      "value": "pe-sql-centralus-prod"
+    },
+    "privateEndpointNameKv": {
+      "value": "pe-kv-cus-prod"
+    },
+    
+    "// Monitoring Parameters": {},
+    "logAnalyticsName": {
+      "value": "log-cloudres-northeurope-prod"
+    },
+    "appInsightsName": {
+      "value": "appi-cloudres-northeurope-prod"
+    },
+    "actionGroupName": {
+      "value": "ag-cloudres-northeurope-prod"
+    },
+    
+    "// Backup Parameters": {},
+    "recoveryVaultName": {
+      "value": "rsv-cloudres-northeurope-prod"
+    }
+  }
+}

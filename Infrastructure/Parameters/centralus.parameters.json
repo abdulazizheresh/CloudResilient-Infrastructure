@@ -1,0 +1,92 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "centralus"
+    },
+    "tags": {
+      "value": {
+        "Project": "CloudResilient",
+        "Environment": "Production",
+        "ManagedBy": "Bicep",
+        "Region": "Central US"
+      }
+    },
+    
+    "// Networking Parameters": {},
+    "hubVnetName": {
+      "value": "vnet-hub-centralus-prod"
+    },
+    "hubAddressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "spokeVnetName": {
+      "value": "vnet-spoke-centralus-prod"
+    },
+    "spokeAddressPrefix": {
+      "value": "10.10.0.0/16"
+    },
+    "nsgName": {
+      "value": "nsg-spoke-centralus-prod"
+    },
+    
+    "// Compute Parameters": {},
+    "functionAppName": {
+      "value": "func-cloudres-centralus-prod"
+    },
+    "storageAccountName": {
+      "value": "stcloudrescentralusprod"
+    },
+    "appServicePlanName": {
+      "value": "asp-cloudres-centralus-prod"
+    },
+    "staticWebAppName": {
+      "value": "stapp-cloudres-centralus-prod"
+    },
+    
+    "// Database Parameters": {},
+    "sqlServerName": {
+      "value": "sql-cloudres-centralus-prod"
+    },
+    "sqlDatabaseName": {
+      "value": "sqldb-cloudres-centralus-prod"
+    },
+    "sqlAdminUsername": {
+      "value": "cloudresadmin"
+    },
+    
+    "// Security Parameters": {},
+    "keyVaultName": {
+      "value": "kv-cloudres-cus-prod"
+    },
+    "managedIdentityName": {
+      "value": "id-cloudres-centralus-prod"
+    },
+    "privateEndpointNameStorage": {
+      "value": "pe-storage-blob-centralus-prod"
+    },
+    "privateEndpointNameSql": {
+      "value": "pe-sql-centralus-prod"
+    },
+    "privateEndpointNameKv": {
+      "value": "pe-kv-cus-prod"
+    },
+    
+    "// Monitoring Parameters": {},
+    "logAnalyticsName": {
+      "value": "log-cloudres-centralus-prod"
+    },
+    "appInsightsName": {
+      "value": "appi-cloudres-centralus-prod"
+    },
+    "actionGroupName": {
+      "value": "ag-cloudres-centralus-prod"
+    },
+    
+    "// Backup Parameters": {},
+    "recoveryVaultName": {
+      "value": "rsv-cloudres-centralus-prod"
+    }
+  }
+}

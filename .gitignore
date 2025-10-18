@@ -1,0 +1,178 @@
+# ========================
+# Azure & Cloud
+# ========================
+*.azureauth
+*.publishsettings
+*.pubxml
+*.pubxml.user
+*.azurePubxml
+local.settings.json
+.env
+.env.local
+
+# Azure Functions
+bin/
+obj/
+.azure/
+__azurite_db*__.json
+__blobstorage__/
+__queuestorage__/
+__azurite_db_blob__.json
+__azurite_db_queue__.json
+
+# ========================
+# Secrets & Credentials
+# ========================
+*.key
+*.pem
+*.pfx
+*.p12
+secrets.json
+appsettings.Development.json
+*.secret
+
+# Key Vault references (local testing)
+keyvault-secrets/
+
+# ========================
+# PowerShell & Logs
+# ========================
+*.log
+*.log.*
+logs/
+*.stackdump
+
+# ========================
+# Node.js & npm
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.npm
+.eslintcache
+
+# ========================
+# IDEs & Editors
+# ========================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# ========================
+# Operating System
+# ========================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ========================
+# Temporary Files
+# ========================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~.nib
+*.cache
+
+# ========================
+# Build & Distribution
+# ========================
+dist/
+build/
+out/
+target/
+*.zip
+*.tar.gz
+*.rar
+
+# ========================
+# Deployment Artifacts
+# ========================
+deployment/
+artifacts/
+*.deployment
+deployment-logs/
+
+# ========================
+# Testing
+# ========================
+coverage/
+*.cover
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+test-results/
+TestResults/
+
+# ========================
+# Documentation Build
+# ========================
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# ========================
+# Bicep & ARM
+# ========================
+# Compiled ARM templates (if auto-generated)
+# *.json (be careful - we want parameter files!)
+
+# ========================
+# Custom Project Specific
+# ========================
+
+# Sensitive parameter files (if any)
+# Infrastructure/Parameters/*.sensitive.json
+
+# Local deployment scripts with hardcoded values
+*local*.ps1
+*test*.ps1
+
+# Personal notes
+NOTES.md
+TODO.md
+*.private.md

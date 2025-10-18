@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CloudResilient Infrastructure 🌍</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">🇬🇧 EN</button>
+                <button class="lang-btn" data-lang="ar">🇸🇦 AR</button>
+                <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
+                <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+
+                <button class="theme-toggle" id="themeToggle"
+                    title="Toggle Theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+
+            <!-- Header -->
+            <div class="header">
+                <h1 data-i18n="header.title">CloudResilient Infrastructure
+                    🌍</h1>
+                <p data-i18n="header.subtitle">Infrastructure as Code Portfolio
+                    Project</p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="cards-grid">
+                <!-- Region Info Card -->
+                <div class="card">
+                    <h2>
+                        <span class="icon">📍</span>
+                        <span data-i18n="cards.region.title">Region
+                            Information</span>
+                    </h2>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.region.current">Current
+                            Region</span>
+                        <span class="info-value" id="region">
+                            <span class="spinner"></span>
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.region.status">Service
+                            Status</span>
+                        <span class="info-value">
+                            <span class="status-indicator status-loading"
+                                id="status"></span>
+                            <span id="status-text"
+                                data-i18n="status.checking">Checking...</span>
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.region.lastUpdate">Last
+                            Update</span>
+                        <span class="info-value" id="timestamp">--:--</span>
+                    </div>
+                </div>
+
+                <!-- Database Info Card -->
+                <div class="card">
+                    <h2>
+                        <span class="icon">💾</span>
+                        <span data-i18n="cards.database.title">Database</span>
+                    </h2>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.database.connection">Connection
+                            Status</span>
+                        <span class="info-value">
+                            <span class="status-indicator status-loading"
+                                id="db-status"></span>
+                            <span id="db-status-text"
+                                data-i18n="status.connecting">Connecting...</span>
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.database.visitors">Visitor
+                            Count</span>
+                        <span class="info-value" id="visitors">
+                            <span class="spinner"></span>
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.database.backupType">Backup
+                            Type</span>
+                        <span class="info-value">Geo-Redundant</span>
+                    </div>
+                </div>
+
+                <!-- System Info Card -->
+                <div class="card">
+                    <h2>
+                        <span class="icon">⚙️</span>
+                        <span data-i18n="cards.system.title">System
+                            Information</span>
+                    </h2>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.system.hosting">Hosting Type</span>
+                        <span class="info-value">Azure Functions</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.system.cdn">CDN</span>
+                        <span class="info-value">
+                            <span class="status-indicator status-online"></span>
+                            <span data-i18n="status.enabled">Enabled</span>
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label"
+                            data-i18n="cards.system.https">HTTPS</span>
+                        <span class="info-value">
+                            <span class="status-indicator status-online"></span>
+                            <span data-i18n="status.secure">Secure</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Statistics Card -->
+                <div class="card stats-card">
+                    <div class="stat-item">
+                        <span class="stat-number" id="uptime">
+                            <span class="spinner"></span>
+                        </span>
+                        <span class="stat-label"
+                            data-i18n="stats.uptime">Uptime</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="response-time">
+                            <span class="spinner"></span>
+                        </span>
+                        <span class="stat-label"
+                            data-i18n="stats.responseTime">Response Time</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="active-regions">
+                            <span class="spinner"></span>
+                        </span>
+                        <span class="stat-label"
+                            data-i18n="stats.activeRegions">Active
+                            Regions</span>
+                    </div>
+                </div>
+
+                <!-- Actions Card -->
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h2>
+                        <span class="icon">🚀</span>
+                        <span data-i18n="cards.actions.title">Actions</span>
+                    </h2>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="refreshData()">
+                            <span data-i18n="buttons.refresh">🔄 Refresh
+                                Data</span>
+                        </button>
+                        <button class="btn btn-secondary"
+                            onclick="testFailover()">
+                            <span data-i18n="buttons.testFailover">🔁 Test
+                                Failover</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="viewLogs()">
+                            <span data-i18n="buttons.viewLogs">📊 View
+                                Logs</span>
+                        </button>
+                        <button class="btn btn-secondary"
+                            onclick="incrementVisitor()">
+                            <span data-i18n="buttons.increment">➕ Increment
+                                Counter</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p data-i18n="footer.built">Built with ❤️ using Azure
+                    Infrastructure as Code (Bicep)</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">
+                    West Us | North Europe | Traffic Manager | Geo-Replication
+                </p>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div class="toast" id="toast"></div>
+
+        <!-- Scripts -->
+        <script src="js/i18n.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
