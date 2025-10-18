@@ -9,7 +9,15 @@
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)]()
 [![IaC](https://img.shields.io/badge/IaC-Bicep-orange?style=for-the-badge)]()
 
-**[Live Demo](https://azuretest100.site)** • **[Documentation](./Docs/)** • **[Architecture](./Docs/architecture.md)**
+**[🎬 Video Demo](https://azuretest100.site)** • **[Documentation](./Docs/)** • **[Architecture](./Docs/architecture.md)**
+
+---
+
+### 🏗️ Architecture Overview
+
+![Architecture Diagram](./Docs/diagrams/architecture.png)
+
+*Multi-region Hub-Spoke topology with automated disaster recovery*
 
 </div>
 
@@ -95,6 +103,12 @@ This project implements a **Hub-Spoke network topology** across **two geographic
 ---
 
 ## 🏗️ Architecture
+
+### Security Architecture
+
+![Security Model](./Docs/diagrams/security-model.png)
+
+*Zero Trust security model with private endpoints and network isolation*
 
 ### Network Topology
 
@@ -363,44 +377,35 @@ Comprehensive documentation available in the `/Docs` folder:
 - **[architecture.md](./Docs/architecture.md)** - Detailed architecture deep dive
 - **[deployment-guide.md](./Docs/deployment-guide.md)** - Step-by-step deployment
 - **[troubleshooting.md](./Docs/troubleshooting.md)** - Common issues and solutions
-- **[cost-analysis.md](./Docs/cost-analysis.md)** - Cost breakdown and optimization
 - **[security-best-practices.md](./Docs/security-best-practices.md)** - Security implementation
 
 ---
 
-## 🎬 Demo & Screenshots
+### ✨ Key Application Features
 
-### Live Demo
-🌐 **[https://azuretest100.site](https://azuretest100.site)**
+- **🌍 Multi-Language Support**
+  - English, Arabic (RTL), German, French
+  - Dynamic language switching without page reload
 
-### Demo Video
-📹 **[Watch Demo Video](./Docs/demo-video/demo-video.mp4)**
+- **🎨 Theme Options**
+  - Dark/Light mode toggle
+  - Persistent user preferences
 
-### Architecture Diagrams
+- **📊 Real-Time Monitoring**
+  - Live visitor counter from SQL Database
+  - Current region and system information
+  - API response times
 
-**High-Level Architecture:**
+- **🔄 Disaster Recovery Demo**
+  - One-click failover testing
+  - Region switching demonstration
+  - Traffic Manager behavior showcase
 
-![Architecture Diagram](./Docs/diagrams/architecture.png)
+- **📱 Responsive Design**
+  - Mobile-first approach
+  - Works seamlessly on desktop, tablet, and mobile devices
 
-**Security Model:**
-
-![Security Architecture](./Docs/diagrams/security-model.png)
-
-### Features Showcase
-- Multi-language support (English, Arabic, German, French)
-- Dark/Light mode toggle
-- Real-time visitor counter
-- System information display
-- Failover testing capability
-
-### Application Screenshots
-
-The application features:
-- **Responsive Design:** Works on desktop, tablet, and mobile
-- **Dark/Light Mode:** User preference toggle
-- **Multi-Language:** English, Arabic (RTL), German, French
-- **Real-time Data:** Live visitor counter and system info
-- **Failover Testing:** One-click region failover test
+**📹 [Watch the complete demo video](./Docs/demo-video/demo-video.mp4)** to see all features in action!
 
 ---
 
